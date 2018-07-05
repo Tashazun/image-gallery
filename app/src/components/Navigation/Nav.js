@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getUsers } from '../auth/reducers';
 import { logout } from '../auth/actions';
-import styles from './Nav.css';
+import styles from './Nav.scss';
 
 class Nav extends Component {
   
@@ -26,20 +26,20 @@ class Nav extends Component {
         <nav className={styles.navigation}>
           <ul>
             <li id='tagline'>APPshot Gallery</li>
-            <li className='link' id='home'>
-              <Link to="/">Home</Link>
+            <li id='home'>
+              <Link className='link' to="/">Home</Link>
             </li>
-            <li className='link' id='albums'>
-              <Link to="/albums">Albums</Link>
+            <li id='albums'>
+              <Link className='link' to="/albums">Albums</Link>
             </li>
-            <li className='link' id='about'>
-              <Link to="/about">About</Link>
+            <li id='about'>
+              <Link className='link' to="/about">About</Link>
             </li>
-            <li className='link' >
+            <li>
               {
                 user
-                  ? <Link to="/" onClick={this.handleLogout}>Logout</Link>
-                  : <Link to="/auth">Login</Link>
+                  ? <Link className='link' to="/" onClick={this.handleLogout}>Logout</Link>
+                  : <Link className='link' to="/auth">Login</Link>
               }
             </li>
           </ul>

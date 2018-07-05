@@ -10,7 +10,7 @@ import Albums from '../Albums/Albums';
 import About from '../AboutPage/About';
 import PrivateRoute from './PrivateRoute';
 import Auth from '../auth/Auth';
-import styles from './App.css';
+import styles from './App.scss';
 
 class App extends PureComponent {
 

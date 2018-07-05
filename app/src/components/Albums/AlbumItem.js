@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './AlbumItem.css';
+import styles from './AlbumItem.scss';
 
 export default class AlbumItem extends PureComponent {
   

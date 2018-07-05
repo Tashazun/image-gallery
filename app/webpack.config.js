@@ -52,6 +52,29 @@ module.exports = {
         ]
       },
       {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader',
+            options: { sourceMap: true }
+          },
+          {
+            loader: 'css-loader',
+            options: { 
+              sourceMap: true,
+              importLoaders: 1 
+            }
+          },
+          {
+            loader: 'sass-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: { sourceMap: true }
+          }
+        ]
+      },
+      {
         test: /\.(jpg|png|svg)$/,
         use: {
           loader: 'url-loader',
