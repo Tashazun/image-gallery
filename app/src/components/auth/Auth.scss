@@ -1,3 +1,23 @@
 :local(.container) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    p {
+        grid-column: 2 / 3;
+        justify-self: center;
+        align-self: end;
+    }
+    form {
+        border: .5em solid white;
+        border-radius: 5px;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        padding: 2em;
+        justify-self: center;
+    }
+    button {
+        margin: 1em;
+        
+    }
 }
